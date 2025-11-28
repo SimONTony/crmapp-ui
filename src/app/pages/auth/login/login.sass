@@ -1,0 +1,88 @@
+@import '_variables.sass'
+@import '_mixins.sass'
+
+.login-card
+  background-color: white
+  border-radius: $border-radius
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+  padding: 40px
+  width: $card-width
+  text-align: center
+
+  .logo
+    margin-bottom: 20px
+
+    .logo-text
+      font-size: 28px
+      font-weight: bold
+      background: $gradient-logo
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+  .portal-title
+    font-size: 18px
+    font-weight: 600
+    color: $color-text-dark
+    margin-bottom: 5px
+
+  .subtitle
+    font-size: 14px
+    color: $color-text-medium
+    margin-bottom: 25px
+
+  .form-group
+    text-align: left
+    margin-bottom: 15px
+
+    label
+      display: block
+      font-size: 13px
+      color: $color-text-dark
+      margin-bottom: 5px
+      font-weight: bold
+
+    input
+      width: 100%
+      padding: 10px 12px
+      border: 1px solid $color-border-light
+      border-radius: $input-border-radius
+      font-size: 14px
+      box-sizing: border-box
+      background-color: $color-background-light
+
+  .options-row
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 20px
+    font-size: 13px
+
+    .remember-me
+      display: flex
+      align-items: center
+      color: $color-text-medium
+
+      input[type="checkbox"]
+        margin-right: 5px
+
+    .forgot-password
+      color: $color-primary
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+  .signin-button
+    width: 100%
+    padding: 12px
+    background-color: #6b59a8
+    color: white
+    border: none
+    border-radius: 8px
+    font-size: 16px
+    font-weight: bold
+    cursor: pointer
+    transition: background-color 0.3s ease
+    &:hover
+      background-color: $color-primary-hover
+

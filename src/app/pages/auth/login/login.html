@@ -1,0 +1,36 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="logo">
+      <span class="logo-text">CRMApp</span>
+    </div>
+
+    <h2 class="portal-title">Admin Portal</h2>
+    <p class="subtitle">Sign in to access your dashboard</p>
+
+    <form [formGroup]="loginForm" (submit)="login()">
+      <div class="form-group" >
+        <label for="email">Username</label>
+        <input id="email"
+               name="email"
+               formControlName="email"
+               placeholder="Sisesta kasutajanimi"
+               (keyup.enter)="loginForm.valid ? login() : $event.stopPropagation()">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password"
+               name="password"
+               formControlName="password"
+               placeholder="Sisesta parool"
+               (keyup.enter)="loginForm.valid ? login() : $event.stopPropagation()">
+      </div>
+
+      <div class="options-row">
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="signin-button" [disabled]="loginForm.invalid">Sign In</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<nav class="sidebar">
+    <div class="nav-list">
+        @for (navItem of navItems; track navItem.link) {
+            <div routerLinkActive="active" class="nav-item">
+                <a [routerLink]="navItem.link">
+                    <fa-icon class="icon" [icon]="navItem.icon" />
+                    {{ navItem.name }}
+                </a>
+            </div>
+        }
+    </div>
+</nav>

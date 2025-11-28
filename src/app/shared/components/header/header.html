@@ -1,0 +1,28 @@
+@if (appUser$ | async; as appUser) {
+
+    <header class="app-header" >
+
+        <div class="logo-area">
+            <div class="logo-image">
+                <img ngSrc="../assets/images/logo.svg" alt="" height="37" width="100" priority/>
+            </div>
+            <div class="title-container">
+                <span class="title-name">Admin Portal</span>
+                <span class="title-description">Management Dashboard</span>
+            </div>
+        </div>
+
+        <div class="user-area">
+            <div class="user-info">
+                <span class="user-role">{{ appUser.fullName }}</span>
+                <span class="user-email">{{ appUser.email }}</span>
+            </div>
+            <button class="logout-button" (click)="logout()">
+                Logout <span class="arrow-icon">&rarr;</span>
+            </button>
+        </div>
+
+    </header>
+
+}
+

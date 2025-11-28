@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './assets/_variables.sass'
+@import './assets/_mixins.sass'
+
+html, body
+    font-family: Calibri, Roboto, sans-serif
+    background: $gradient-page
+    +flex(row, flex-start, flex-start)
+    height: 100%
+    width: 100%
+
+.main-content-wrap
+    display: flex
+    width: 100%
+    position: relative
+    top: calc(#{$header-height} - 7px)
+    height: calc(100vh - #{$header-height} + 9px)
+    overflow: auto
+
+.content-area
+    flex-grow: 1
+    padding: 20px
+    background-color: #f9f9fa
+
+app-root
+    width: 100%
+
+app-sidebar
+    width: $sidebar-nav-width
+
+app-login
+    +flex(row, center, center)
+    height: 100vh
+

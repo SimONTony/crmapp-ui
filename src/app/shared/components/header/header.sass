@@ -1,0 +1,64 @@
+@import '_variables'
+@import '_mixins'
+
+.app-header
+    +flex(row, space-between, center)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1000
+    width: 100%
+    background-color: $color-white
+    border-bottom: 1px solid #ddd
+    height: $header-height
+
+    .logo-area
+        +flex(row, center, center)
+
+        .logo-image
+            margin: 15px 35px 15px 25px
+
+        .title-container
+            +flex(column, flex-start)
+
+            .title-name
+                font-weight: 500
+                font-size: 19px
+
+            .title-description
+                font-size: 16px
+                color: #666
+
+    .user-area
+        +flex(row, flex-end, center)
+        margin: 0 15px
+
+        .user-info
+            +flex(column, flex-end, flex-end)
+            text-align: right
+            margin-right: 15px
+
+            .user-role
+                font-weight: 500
+                font-size: 18px
+
+            .user-email
+                font-size: 15px
+                color: #666
+
+        .logout-button
+            background-color: #7c69bf
+            color: #fff
+            border: none
+            padding: 10px 15px
+            border-radius: 12px
+            font-weight: 500
+            display: flex
+            align-items: center
+
+            .arrow-icon
+                margin-left: 8px
+                font-size: 18px
+
+            &:hover
+                background-color: #6b59a8

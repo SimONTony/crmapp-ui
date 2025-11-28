@@ -1,0 +1,43 @@
+@import '_variables'
+@import '_mixins'
+
+.sidebar
+    height: 100%
+    background-color: $color-white
+    border-right: 1px solid #C1BFBFFF
+    padding: 10px
+
+    .nav-list
+        +flex(column, flex-start, flex-start)
+        margin-top: 6px
+
+    .nav-item
+        width: 100%
+        border-radius: 12px
+        margin-bottom: 10px
+        &.active
+            border-radius: 12px
+            background-color: #ededf4
+            margin-bottom: 10px
+            border: 1px solid #c1bfbf
+
+            a
+                color: #4e4d75
+
+        a
+            +flex(row, flex-start, center)
+            text-decoration: none
+            color: #333
+            padding: 15px 30px
+            font-size: 19px
+
+            .icon
+                margin-right: 10px
+                font-size: 18px
+
+            &:hover
+                background-color: #efedf5
+                border-radius: 12px
+
+
+
