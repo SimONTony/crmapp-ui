@@ -1,15 +1,10 @@
 export interface User {
     id: number;
-    email: string;
-    firstname: string;
-    lastname: string;
-    lastLogin: Date;
+    username: string;
+    lastLoginAt: Date;
     createdAt: Date;
     mfaSecret: string;
     mfaEnabled: boolean;
-    personalCode: string;
-    phone: string
-    requirePasswordChange: boolean
     role: UserRole
     status: string
     updatedAt: Date
