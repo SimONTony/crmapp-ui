@@ -5,16 +5,14 @@ import {environment} from '../../../environments/environment';
 @Injectable({
     providedIn: 'root'
 })
-export class PersonService {
-
+export class UserService {
 
     constructor(private httpService: HttpService) {
     }
 
-    getAllPersons() {
+    getAllUsers() {
         return this.httpService.get({
-            url: `${environment.api.path}/persons`,
+            url: `${environment.api.path}/user/all`,
         });
-
     }
 }

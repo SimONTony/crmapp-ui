@@ -3,23 +3,23 @@ import {CommonModule} from '@angular/common';
 import {SharedModule} from '../../shared/shared.module';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
-import {PersonsRoutingModule} from './persons-routing-module';
-import {Persons} from './persons';
+import {UserRoutingModule} from './user-routing-module';
+import {AllUsers} from './all/all-users';
 import {TableModule} from 'primeng/table';
 
 
 @NgModule({
     declarations: [
-        Persons
+        AllUsers
     ],
     imports: [
         CommonModule,
         SharedModule,
         RouterModule,
         ReactiveFormsModule,
-        PersonsRoutingModule,
+        UserRoutingModule,
         TableModule
     ]
 })
-export class PersonsModule {
+export class UserModule {
 }
