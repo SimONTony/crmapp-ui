@@ -10,6 +10,7 @@ export interface AppUser {
   editedAt: Date;
   disabled: boolean;
   deleted: boolean;
+  username: string;
 }
 
 export enum UserRole {

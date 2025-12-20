@@ -1,1 +1,11 @@
-<router-outlet />
+@if (isLoginPageActive) {
+    <app-login></app-login>
+} @else {
+    <app-header></app-header>
+    <div class="main-content-wrap">
+        <app-sidebar></app-sidebar>
+        <div class="content-area">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+}
